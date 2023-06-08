@@ -1,310 +1,191 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*cuerpo*/
+/* Estilos generales */
 body {
-  padding-bottom: 150px;
-  position: relative;
-  min-height: 100vh;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-}
-
-/*encabezado*/
-header {
-  background-color: #9beb80;
-  width: 100%;
-  height: 90px;
-  position: fixed;
-  top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-  z-index: 100;
-}
-
-header .logo {
-  display: flex;
-  align-items: center;
-  
+    margin: 0; /* Establece el margen exterior del cuerpo del documento en 0 píxeles */
+    padding: 0; /* Establece el relleno interno del cuerpo del documento en 0 píxeles */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    font-family: Arial, sans-serif; /* Establece la fuente a utilizar en el cuerpo del documento */
+    position: relative;
+    overflow-x: hidden;/* Oculta la barra de desplazamiento horizontal */
 }
   
+/* Estilos para la barra de navegación */
+.encabezado {
+    background-color: #5ec954; /* Establece el color de fondo del encabezado en verde */
+    color: white; /* Establece el color del texto del encabezado en blanco */
+    padding: 10px; /* Establece el relleno interno del encabezado en 10 píxeles */
+    display: flex; /* Utiliza flexbox para alinear y distribuir los elementos del encabezado */
+    justify-content: space-between; /* Distribuye los elementos del encabezado de manera uniforme en el espacio disponible */
+    align-items: center; /* Centra verticalmente los elementos del encabezado */
+    width: 100%; /* Establece el ancho al 100% */
+  
+    position: fixed; /* Establece la posición fija del encabezado */
+    top: 0; /* Establece la posición superior del encabezado */
+    left: 0; /* Establece la posición izquierda del encabezado */
+    right: 0; /* Establece la posición derecha del encabezado */
+    z-index: 9999; /* Establece la posición z del encabezado */ 
+}
 
-header .logo img {
-    width: 60px;
-    height: auto;
+/* Establece un contenedor flexible para los elementos del encabezado cuando la pantalla tiene un ancho máximo de 789px */
+@media screen and (max-width: 789px) {
+ .encabezado {
+ display: flex; /* Establece un contenedor flexible para los elementos del encabezado */
+ flex-wrap: wrap; /* Permite que los elementos se ajusten automáticamente para mantenerse en la misma línea */
+ justify-content: space-between; /* Distribuye uniformemente los elementos en el espacio disponible */
+ align-items: center; /* Centra verticalmente los elementos en el contenedor */
+    } 
+}
+.encabezado_logo {
+    display: flex; /* Aplicar flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Alinear elementos verticalmente en el centro */
+}
+
+/* Estilos para el logotipo del encabezado */
+.encabezado_logo img {
+    height: 50px; /* Establece la altura de la imagen del logotipo en 50 píxeles */
+    width: auto; /* Permite que el ancho de la imagen del logotipo se ajuste automáticamente */
+    display: inline-block; /* Muestra la imagen en línea con otros elementos */
 }
   
-
-header .logo .logo-text {
-    display: flex;
-    margin: 2px;
-    font-size: 150%;
+/* Estilos para el texto del logotipo del encabezado */
+.encabezado_logo h1 {
+    font-size: 18px; /* Establece el tamaño de fuente del texto del logotipo en 18 píxeles */
+    margin-left: 10px; /* Establece un margen izquierdo de 10 píxeles para el texto del logotipo */
+    display: inline-block; /* Muestra el texto en línea con otros elementos */
 }
-@media(max-width:888px){
-  .logo-text {
-      font-size: 100%;
-    }
+.encabezado-logo_text a {
+    text-decoration: none;
+    color: white; /* Establece el color del texto de los enlaces en blanco */
+    font-weight: normal;
 }
-
-header .logo-enlaces ul {
-  list-style: none;
-  display: flex;
+  
+/* Estilos para los enlaces del encabezado */
+.encabezado_enlaces ul {
+    list-style-type: none; /* Elimina las viñetas de la lista de enlaces */
+    margin: 0; /* Establece el margen exterior de la lista de enlaces en 0 píxeles */
+    padding: 0; /* Establece el relleno interno de la lista de enlaces en 0 píxeles */
+    display: flex; /* Utiliza flexbox para alinear los elementos de la lista en una fila */
 }
-@media(max-width:888px){
-    .logo-enlaces {
-       flex-wrap: wrap;
-    }
+  
+.encabezado_enlaces li {
+    margin-right: 10px; /* Establece un margen derecho de 10 píxeles para los elementos de la lista de enlaces */
 }
-
-
-header .logo-enlaces ul li a {
-  /*saca la decoracion de los enlases*/
-  text-decoration: none;
-  text-emphasis: none;
-  color: black;
-  margin: 210px 0 5px 53px;
-}
-
-header .logo-enlaces ul li a:hover{
-   background-color:#d3d3d3;
-   border-bottom: 1px solid black;
-}
-
-a:link, a:visited, a:active{
-  text-decoration: none;
-  transition: 5s;
+  
+.encabezado_enlaces li a {
+    color: white; /* Establece el color del texto de los enlaces en blanco */
+    text-decoration: none; /* Elimina la decoración subrayada de los enlaces */
+    padding: 5px; /* Establece el relleno interno de los enlaces en 5 píxeles */
+ 
+    white-space: nowrap;/* Establece que el texto no se envuelva en varias líneas */
+    
 }
  
+.encabezado_logo {
+ order: 1; /* Establece el orden del elemento .encabezado_logo dentro del contenedor flexible */
+}
+ 
+.encabezado_enlaces {
+ order: 2; /* Establece el orden del elemento .encabezado_enlaces dentro del contenedor flexible */ 
+}
+  
+.encabezado_enlaces li a:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* Establece un color de fondo traslúcido al pasar el cursor sobre los enlaces En el código anterior, el 0.5representa la opacidad, donde 0es completamente transparente y 1es completamente opaco. Puede ajustar este valor según sus necesidades para obtener el nivel de transparencia deseado.
 
-
-footer div ul li img {
-    width: 30px;
-    height: 30px;
+    Recuerda que los valores rgba(rojo, verde, azul, alfa) se utilizan para especificar colores con transparencia, donde los valores de rojo, verde y azul están en el rango de 0 a 255, y el valor alfa está en el rango de 0 a 1.
+    
+    Espero que esto te sea util. Si tienes más preguntas, no dudes en preguntar. */
+}
+@media (min-width: 576px) and (max-width: 821px) {
+    .encabezado_enlaces .nav-link {
+      font-size: 12px; /* Tamaño de letra para pantallas entre 307px y 905px */
+    }
 }
 
+.encabezado_enlaces nav ul {
+  margin-right: 0; /* Elimina el margen derecho predeterminado de la lista de enlaces */
+}
+
+.encabezado_enlaces nav ul li {
+  margin-right: 10px; /* Margen derecho entre elementos de la lista de enlaces */
+}
+
+.encabezado_enlaces nav ul li:last-child {
+  margin-right: 0; /* Elimina el margen derecho del último elemento de la lista */
+}
+@media (max-width: 767px) {
+  .encabezado_enlaces .nav-item:nth-child(3) .nav-link {
+    overflow-wrap: break-word; /* Aplica el salto de línea en la tercera opción de navegación */
+    word-wrap: break-word; /* Fallback para navegadores más antiguos */
+  }
+}
+  
+  
+  
 main{
     width: 90%;
     margin: 0 auto;
     margin-top: 100px;
-    border: 2px solid red;
-    padding: 40px;
+    padding: 10px;
 }
 
-/*pie de pagina*/
-#pie{
-    width: 100%;
-    height: 10vh;
-    background-color: rgb(190, 187, 187);
-    position: absolute;
-    bottom: 0;
-  
-} 
-
-#pie div ul{
-    margin: 20px 30px 10px 40px;
-
+.main_section {
+    background-color: #faf6e4; /* Establece el color de fondo de la sección principal */
+    padding: 50px; /* Establece el relleno de la sección principal */
+    margin-left: 20px; /* Establece el margen izquierdo de la lista de la sección principal */
 }
 
-
-
-/*inicio*/
-/*.texto .texto2 {
-    margin: 20px 100px 10px 40px;
-}
-*/
-.main_section , .texto{
-    display: inline-block;
-    margin: 20px 100px 10px 40px;
-}
-.main-section-art2_lista{
-    margin: 20px 100px 10px 60px;
-}
-/*definir tamano de ima*/
-.main-section_arbol{
-    width: 320px;
-    height: 300px;
-
+.main-section_titulo {
+    color: #4CAF50; /* Establece el color del título de la sección principal */
+    margin-left: 20px; /* Establece el margen izquierdo del título de la sección principal */
 }
 
+.main-section_texto1 {
+    font-size: auto; /* Establece el tamaño de fuente del texto de la sección principal */
+     /* Establece el margen izquierdo del texto de la sección principal */
+}
 
-/*Contenedor grilla*/
-.main_section{
-    width: 90%;
-    height: 600px;
+.main-section_lista1 {
+    margin-left: 20px; /* Establece el margen izquierdo de la lista de la sección principal */
+}
+
+.main-section_lista1 li {
+    list-style-type: none; /* Elimina los puntos de la lista de la sección principal */
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    grid-template-rows: 50px repeat(5, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
-    border: 2px solid blue;
 }
 
-.main-section_titulo{
-    grid-column: 1/3;
-    grid-row: 1/2;
-}
-.main-section_texto1{
-    grid-column:1/2;
-    grid-row: 2/3;
-}
-.main-section_lista1{
-    grid-column:1/2;
-    grid-row: 3/4;
-    margin: o auto;
-    text-align: center;
-    list-style: none;
-    font-weight: bold;
-    padding: 20px;
-    background-color: #cce7c3;
-    border-radius: 10px;
-}
-.main-section_p1{
-    grid-column:1/2;
-    grid-row: 4/5;
-}
-.main-sectio_p2{
-    grid-column:1/3;
-    grid-row: 5/6;
-}
-.main-section_div{
-    grid-column: 1/2;
-    grid-row: 6/7; 
-}
-.main-section_arbol{
-    grid-column: 2/3;
-    grid-row: 2/7;
-}
-.main-section-div_lista2{
-    list-style: none;
-    display: inline-block;
-    margin: 20px 100px 10px 40px;
-}
-/*servicios*/
-.servicios-lista h2{
-    margin: 20px 100px 30px 40px;
-}
-.servicios-lista ul li{
-    margin: 20px 100px 30px 40px;
+
+
+.main-section-div_p3 {
+    font-weight: bold; /* Establece el peso en negrita del párrafo 3 del div de la sección principal */
 }
 
-.contenedor-grilla{
-    width: 90%;
-    height: 100vh;
+
+.main_section-div_lista2 li {
+    list-style-type: none; /* Elimina los puntos de la lista 2 del div de la sección principal */
+    margin-bottom: 10px; /* Establece el margen inferior de cada elemento de la lista 2 del div de la sección principal */
+}
+@media (max-width: 768px) {
+    .main-section_arbol {
+      max-width: 40%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+}
+    
+/*SERVICIOS*/
+.col-12{
+    margin: 2px 2px 2px 2px;  
+}
+.contenedor-grilla-h1{
+    margin: 2px 2px 5px 2px;
+}
+/*.contenedor-grilla{
+   
+    display: flex;
+    justify-content: center;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: 60px 1fr;
-    grid-template-rows: repeat(12, 1fr);
-    column-gap: 10px;
-    row-gap: 10px;
-    border: 2px solid blue;
 }
 
-.contenedor-grilla .contenedor-grilla-h1{
-    grid-column: 1/3;
-    grid-row: 1/2;
-}
-
-.contenedor-grilla .p-1{
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-.contenedor-grilla .p-2{
-    grid-column: 2/3;
-    grid-row: 3/4;
-}
-
-.contenedor-grilla .p-3{
-    grid-column: 2/3;
-    grid-row: 4/5;
-}
-
-.contenedor-grilla .p-4{
-    grid-column: 2/3;
-    grid-row: 5/6;
-}
-.contenedor-grilla .p-5{
-    grid-column: 2/3;
-    grid-row: 6/7;
-}
-.contenedor-grilla .p-6{
-    grid-column: 2/3;
-    grid-row: 7/8;
-}
-.contenedor-grilla .p-7{
-    grid-column: 2/3;
-    grid-row: 8/9;
-}
-.contenedor-grilla .p-8{
-    grid-column: 2/3;
-    grid-row: 9/10;
-}
-.contenedor-grilla .p-9{
-    grid-column: 2/3;
-    grid-row: 10/11;
-}
-.contenedor-grilla .p-10{
-    grid-column: 2/3;
-    grid-row: 11/12;
-}
-.contenedor-grilla .p-11{
-    grid-column: 2/3;
-    grid-row: 12/13;
-}
-
-/*iconos*/
-.contenedor-grilla .icono-1{
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-.contenedor-grilla .icono-2{
-    grid-column: 1/2;
-    grid-row: 3/4;
-}
-.contenedor-grilla .icono-3{
-    grid-column: 1/2;
-    grid-row: 4/5;
-}
-.contenedor-grilla .icono-4{
-    grid-column: 1/2;
-    grid-row: 5/6;
-}
-.contenedor-grilla .icono-5{
-    grid-column: 1/2;
-    grid-row: 6/7;
-}
-.contenedor-grilla .icono-6{
-    grid-column: 1/2;
-    grid-row: 7/8;
-}
-.contenedor-grilla .icono-7{
-    grid-column: 1/2;
-    grid-row: 8/9;
-}
-.contenedor-grilla .icono-8{
-    grid-column: 1/2;
-    grid-row: 9/10;
-}
-.contenedor-grilla .icono-9{
-    grid-column: 1/2;
-    grid-row: 10/11;
-}
-.contenedor-grilla .icono-10{
-    grid-column: 1/2;
-    grid-row: 11/12;
-}
-.contenedor-grilla .icono-11{
-    grid-column: 1/2;
-    grid-row: 12/13;
-}
 
 
 
@@ -339,9 +220,109 @@ main{
 }
 
 
-/*Contacto*/
-.formulario{
-    margin: 30px 10px 10px 40px;
+/* Estilos para el formulario */
+.formulario-contacto {
+    max-width: 400px; /* Establece el ancho máximo del formulario en 400px */
+    margin: 0 auto; /* Centra el formulario horizontalmente en el contenedor */
+}
+  
+/* Estilos para las etiquetas de los campos */
+label {
+    display: block; /* Hace que las etiquetas sean elementos de bloque, ocupando una línea completa */
+    margin-top: 10px; /* Agrega un margen superior de 10px a las etiquetas */
+    font-weight: bold; /* Establece el peso de la fuente en negrita para las etiquetas */
+}
+  
+/* Estilos para los campos de entrada y el área de texto */
+input,
+textarea {
+    width: 100%; /* Hace que los campos ocupen el ancho completo del contenedor */
+    padding: 5px; /* Agrega un relleno interno de 5px a los campos */
+    margin-top: 5px; /* Agrega un margen superior de 5px a los campos */
+    border: 1px solid #ccc; /* Establece un borde de 1px sólido de color gris claro (#ccc) para los campos */
+    border-radius: 4px; /* Agrega bordes redondeados a los campos */
+}
+  
+/* Estilos para el botón de envío */
+input[type="submit"] {
+    background-color: #5ec954; /* Establece el color de fondo del botón de envío en verde (#5ec954) */
+    color: white; /* Establece el color de texto del botón de envío en blanco */
+    border: none; /* Elimina el borde del botón de envío */
+    padding: 10px 20px; /* Agrega un relleno interno de 10px en la parte superior e inferior y 20px en los lados del botón de envío */
+    margin-top: 10px; /* Agrega un margen superior de 10px al botón de envío */
+    cursor: pointer; /* Cambia el cursor a una mano cuando se pasa sobre el botón de envío */
 }
 
+/* Estilos para los mensajes de error */
+span {
+    color: red; /* Establece el color de texto de los mensajes de error en rojo */
+}
+  
+/* Estilos para los campos requeridos */
+input:required,
+textarea:required {
+    border-color: #5ec954; /* Establece el color del borde de los campos requeridos en verde (#5ec954) */
+}
 
+/* Estilos para los campos válidos */
+input:valid,
+textarea:valid {
+    border-color: #ccc; /* Establece el color del borde de los campos válidos en gris claro (#ccc) */
+}
+
+.formulario-mapa {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+    height: 40vh; /* Ajusta la altura al 100% del viewport */
+}
+
+.formulario-mapa iframe {
+  margin-right: 20px; /* Agrega un margen derecho para separar el mapa del formulario */
+}
+
+@media (max-width: 768px) {
+  .formulario-mapa {
+    flex-direction: column; /* Cambia la disposición de los elementos a columna en pantallas pequeñas */
+  }
+
+  .formulario-mapa iframe {
+    margin-right: 0; /* Elimina el margen derecho en pantallas pequeñas */
+    margin-bottom: 20px; /* Agrega un margen inferior para separar el mapa del formulario */
+    width: auto;
+  }
+}
+  
+
+
+#main {
+    margin-bottom: 100px; /* Agregar margen inferior para dar espacio al pie de página */
+    box-sizing: border-box; /* Incluir padding y borde dentro del ancho total del elemento */
+}
+ 
+/*Pie de pagina*/
+#pie {
+  width: 100%;
+  background-color: #f2f2f2;
+  padding: 20px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+#pie ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#pie ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#pie ul li img {
+  width: 30px;
+  height: 30px;
+}
+       

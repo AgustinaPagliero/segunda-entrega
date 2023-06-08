@@ -11,38 +11,54 @@
         <link rel="shortcut icon" href="../icon/favicon-16X16.png">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <img src="../image/arbol-sin-fondo.png" alt="logo">
-              <h1 class="logo-text">Residencia Universitaria Cordoba</h1>
+        <header class="encabezado">
+            <div class="encabezado_logo">
+                <a href="../index.html">
+                    <img src="../image/arbol-sin-fondo.png"  alt="logo">
+                </a>
+                <h1 class="encabezado-logo_text"><a href="../index.html">Residencia Universitaria Cordoba</a></h1>
             </div>
-  
-            <nav class="logo-enlaces">
+    
+            <nav class="encabezado_enlaces">
                 <ul>
-                    <li><a href="../index.html">inicio</a></li>
-                    <li><a href="./servicios.html">Servisios</a></li>
-                    <li><a href="./fotos.html">Fotos</a></li>
-                    <li><a href="./convenio.html">Convenio de Convivencia</a></li>
-                    <li><a href="#">Contacto</a></li>
+                  <li><a href="./servicios.html">Servicios</a></li>
+                  <li><a href="./fotos.html">Fotos</a></li>
+                  <li><a href="./convenio.html">Convenio de Convivencia</a></li>
+                  <li><a href="#">Contacto</a></li>
                 </ul>
-                
             </nav>
-        </header>
-        <main>
-            <form class="formulario" action="">
-                <label for="nombre">Nombre del estudiante:</label>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-
-                <label for="edad">Edad del estudiante:</label>
-                <input type="text" name="edad" id="edad" placeholder="edad">
                 
-                <label for="email"> Email:</label>
-                <input type="email" name="email" id="email" placeholder="email">
+        </header>
+        
+        <main id="main">
+            <form class="formulario-contacto">
+                <label for="nombre">NOMBRE (del Estudiante)<span>*</span></label>
+                <input type="text" id="nombre" name="nombre" required>
+                
+                <label for="edad">EDAD<span>*</span></label>
+                <input type="number" id="edad" name="edad" required>
+                
+                <label for="lugar">LUGAR DE PROCEDENCIA<span>*</span></label>
+                <input type="text" id="lugar" name="lugar" required>
+                
+                <label for="estudio">QUE ESTUDIA?<span>*</span></label>
+                <input type="text" id="estudio" name="estudio" required>
+                
+                <label for="fecha">FECHA DE INGRESO EN LA RESIDENCIA<span>*</span></label>
+                <input type="date" id="fecha" name="fecha" required>
+                
+                <label for="email">Email (VERIFICAR que esté bien escrito)<span>*</span></label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="consulta">QUIERES CONSULTARNOS ALGO MÁS?</label>
+                <textarea id="consulta" name="consulta"></textarea>
+                
+                <input type="submit" value="Enviar">
             </form>
-            <section class="formulario">
+              
+              
+            <section class="formulario-mapa">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6809.075143886445!2d-64.18973980533899!3d-31.426864442017838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9432a28fb8f9010b%3A0xf38e0d8c5a49ab83!2zTnVldmEgQ8OzcmRvYmEsIEPDs3Jkb2Jh!5e0!3m2!1ses-419!2sar!4v1682465482664!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            
-
             </section>
     
         
@@ -50,10 +66,10 @@
         
         <!--Pie de pagina-->
         <footer id="pie">
-        
             <div>
                 <ul>
-                    <li><img src="../icon/phone-solid.svg" alt="telefono"></li>
+                    <li><img src="../icon/phone-solid.svg" alt="telefono">+5493516572325</li>
+                    <li><img src="../icon/gmail.png" alt="correo"> info@residenciacordoba.com</li>
                 </ul>
             </div>
         </footer>

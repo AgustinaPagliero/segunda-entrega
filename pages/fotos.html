@@ -12,64 +12,70 @@
         <link rel="shortcut icon" href="../icon/favicon-16X16.png">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <img src="../image/arbol-sin-fondo.png" alt="logo">
-                <h1 class="logo-text">Residencia Universitaria Cordoba</h1>
+        <header class="encabezado">
+            <div class="encabezado_logo">
+              <a href="../index.html">
+                <img src="../image/arbol-sin-fondo.png"  alt="logo">
+              </a>
+              <h1 class="encabezado-logo_text"><a href="..//index.html">Residencia Universitaria Cordoba</a></h1>
             </div>
-  
-            <nav class="logo-enlaces">
-                <ul>
-                    <li><a href="../index.html">inicio</a></li>
-                    <li><a href="./servicios.html">Servisios</a></li>
-                    <li><a href="#">Fotos</a></li>
-                    <li><a href="./convenio.html">Convenio de Convivencia</a></li>
-                    <li><a href="./Contacto.html">Contacto</a></li>
-                </ul>
-                
+        
+            <nav class="encabezado_enlaces">
+              <ul>
+                <li><a href="./servicios.html">Servicios</a></li>
+                <li><a href="#">Fotos</a></li>
+                <li><a href="./convenio.html">Convenio de Convivencia</a></li>
+                <li><a href="./Contacto.html">Contacto</a></li>
+              </ul>
             </nav>
+          
         </header>
- 
-        <main>
+      
+        <main id="main">
             <div class="foto-titulo">
-                <h3>RESIDENCIA UNIVERSITARIA CORDOBA - PARA MUJERES</h3>
+              <h3>RESIDENCIA UNIVERSITARIA CORDOBA - PARA MUJERES</h3>
             </div>
             <!--! etiqueta en bloque: ocupa el ancho de la pantalla como un bloque-->
             <!--etiqueta en linea: ocupa s3olo el contenido-->
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
-                <div class="carousel-indicators">
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="../image/comedorx2.jpg" class="d-block w-100" alt="comedor">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../image/cocina.jpg" class="d-block w-100" alt="cocina">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="../image/armario.jpg" class="d-block w-100" alt="armario">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
               </div>
             
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="../image/comedorx2.jpg" class="d-block w-100" alt="comedor">
+                </div>
+                <div class="carousel-item">
+                  <img src="../image/cocina.jpg" class="d-block w-100" alt="cocina">
+                </div>
+                <div class="carousel-item">
+                  <img src="../image/armario.jpg" class="d-block w-100" alt="armario">
+                </div>
+              </div>
+          
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+            
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          
+            </div>
+            
         </main>
-        
-        <!--Pie de pagina-->
+          
+         <!--Pie de pagina-->
         <footer id="pie">
             <div>
                 <ul>
-                    <li><img src="../icon/phone-solid.svg" alt="telefono"></li>
+                    <li><img src="../icon/phone-solid.svg" alt="telefono">+5493516572325</li>
+                    <li><img src="../icon/gmail.png" alt="correo"> info@residenciacordoba.com</li>
                 </ul>
             </div>
         </footer>
